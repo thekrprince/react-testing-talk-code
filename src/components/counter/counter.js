@@ -7,11 +7,11 @@ const Counter = () => {
     <div>
       <div>
         <p className="count-val">{counter}</p>
-        <button onClick={() => setCounter((prevState) => prevState + 1)}>
-          +
-        </button>
         <button onClick={() => setCounter((prevState) => prevState - 1)}>
           -
+        </button>
+        <button onClick={() => setCounter((prevState) => prevState + 1)}>
+          +
         </button>
       </div>
     </div>

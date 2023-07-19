@@ -7,6 +7,7 @@ const AddInput = ({ todoItems, setTodoItems }) => {
     e.preventDefault();
     const obj = [...todoItems];
     setTodoItems([...obj, inputVal]);
+    setInputVal("");
   };
 
   return (

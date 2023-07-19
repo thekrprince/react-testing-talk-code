@@ -10,7 +10,7 @@ const Todo = () => {
     <div className="todo">
       Todo List
       <AddInput todoItems={todoItems} setTodoItems={setTodoItems} />
-      <TodoList todoItems={todoItems} />
+      <TodoList todoItems={todoItems} setTodoItems={setTodoItems} />
     </div>
   );
 };

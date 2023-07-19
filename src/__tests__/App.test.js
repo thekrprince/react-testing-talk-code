@@ -3,6 +3,6 @@ import App from "../App";
 
 test("renders App", () => {
   render(<App />);
-  const heading = screen.getByText(/counter/i);
+  const heading = screen.getByText(/react testing demo/i);
   expect(heading).toBeInTheDocument();
 });

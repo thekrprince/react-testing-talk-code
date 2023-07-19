@@ -5,6 +5,7 @@ const Counter = () => {
 
   return (
     <div>
+      <h4>Counter</h4>
       <div>
         <p className="count-val">{counter}</p>
         <button onClick={() => setCounter((prevState) => prevState - 1)}>

@@ -1,19 +1,26 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import Counter from "../../components/counter/counter";
 
-test("Counter", () => {
-  render(<Counter />);
+describe("Test counter component", () => {
+  it("should render counter initial state", () => {
+    render(<Counter />);
+    expect(screen.getByText("Counter")).toBeInTheDocument();
+    expect(screen.getByText("0")).toBeInTheDocument();
+  });
 
-  const plusBtn = screen.getByRole("button", { name: "+" });
-  expect(plusBtn).toBeInTheDocument();
+  it("should test counter value increase and decrease", () => {
+    render(<Counter />);
+    const plusBtn = screen.getByRole("button", { name: "+" });
+    expect(plusBtn).toBeInTheDocument();
 
-  const minusBtn = screen.getByRole("button", { name: "-" });
-  expect(minusBtn).toBeInTheDocument();
+    const minusBtn = screen.getByRole("button", { name: "-" });
+    expect(minusBtn).toBeInTheDocument();
 
-  fireEvent.click(plusBtn);
-  expect(screen.getByText("1")).toBeInTheDocument();
+    fireEvent.click(plusBtn);
+    expect(screen.getByText("1")).toBeInTheDocument();
 
-  fireEvent.click(plusBtn);
-  fireEvent.click(plusBtn);
-  expect(screen.getByText("3")).toBeInTheDocument();
+    fireEvent.click(plusBtn);
+    fireEvent.click(plusBtn);
+    expect(screen.getByText("3")).toBeInTheDocument();
+  });
 });

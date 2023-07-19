@@ -1,7 +1,7 @@
 import { RouterProvider, createHashRouter } from "react-router-dom";
-import "./App.css";
 import Counter from "./components/counter/counter";
 import Switch from "./components/switch";
+import "./App.css";
 
 function App() {
   const router = createHashRouter([

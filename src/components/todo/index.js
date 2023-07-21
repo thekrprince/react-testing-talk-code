@@ -8,7 +8,7 @@ const Todo = () => {
 
   return (
     <section className="todo">
-      <h4>Todo List</h4>
+      <h3>Todo List</h3>
       <div className="todo-box">
         <AddInput todoItems={todoItems} setTodoItems={setTodoItems} />
         <TodoList todoItems={todoItems} setTodoItems={setTodoItems} />

@@ -7,9 +7,9 @@ const TodoList = ({ setTodoItems, todoItems }) => {
   return (
     <div>
       {todoItems.map((item, id) => (
-        <div className="item">
-          <p key={id}>{item}</p>
-          <button onClick={() => deleteHandler(id)}>X</button>
+        <div className="item" key={id}>
+          <p>{item}</p>
+          <button onClick={() => deleteHandler(id)}>Remove</button>
         </div>
       ))}
       <p>Total Items: {todoItems.length}</p>

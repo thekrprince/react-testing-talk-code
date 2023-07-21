@@ -7,11 +7,13 @@ const Todo = () => {
   const [todoItems, setTodoItems] = useState([]);
 
   return (
-    <div className="todo">
-      Todo List
-      <AddInput todoItems={todoItems} setTodoItems={setTodoItems} />
-      <TodoList todoItems={todoItems} setTodoItems={setTodoItems} />
-    </div>
+    <section className="todo">
+      <h4>Todo List</h4>
+      <div className="todo-box">
+        <AddInput todoItems={todoItems} setTodoItems={setTodoItems} />
+        <TodoList todoItems={todoItems} setTodoItems={setTodoItems} />
+      </div>
+    </section>
   );
 };
 

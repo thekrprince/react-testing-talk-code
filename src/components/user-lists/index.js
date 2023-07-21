@@ -8,7 +8,6 @@ const UserLists = () => {
     const response = await fetch("https://dummyapi.io/data/v1/user?limit=10", {
       headers: { "app-id": "64ba4b25a3aa935817b41816" },
     });
-    console.log(response);
     const users = await response.json();
     setUserLists(users?.data);
   };
@@ -16,8 +15,6 @@ const UserLists = () => {
   useEffect(() => {
     getUserLists();
   }, []);
-
-  console.log(userLists);
 
   return (
     <main className="user-lists">

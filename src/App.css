@@ -6,6 +6,10 @@
   color: aqua;
 }
 
+h1 {
+  color: white;
+}
+
 button {
   cursor: pointer;
   margin: 0 0.5rem;

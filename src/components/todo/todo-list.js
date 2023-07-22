@@ -7,7 +7,7 @@ const TodoList = ({ setTodoItems, todoItems }) => {
   return (
     <div>
       {todoItems.map((item, id) => (
-        <div className="item" key={id}>
+        <div className="item" data-testid={`item-${id}`} key={id}>
           <p>{item}</p>
           <button onClick={() => deleteHandler(id)}>Remove</button>
         </div>

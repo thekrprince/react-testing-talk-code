@@ -2,7 +2,7 @@ import { RouterProvider, createHashRouter } from "react-router-dom";
 import Todo from "./components/todo";
 import "./App.css";
 import UserLists from "./components/user-lists";
-import CounterProvider, { Counter } from "./components/counter/CounterContext";
+import CounterProvider from "./components/counter/CounterContext";
 
 function App() {
   const router = createHashRouter([
